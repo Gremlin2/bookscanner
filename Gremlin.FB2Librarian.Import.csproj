@@ -1,0 +1,293 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7371A2C7-A25D-4F27-8499-009DFCB4CB86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gremlin.FB2Librarian.Import</RootNamespace>
+    <AssemblyName>Gremlin.FB2Librarian.Import</AssemblyName>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v8.3, Version=8.3.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="HTMLayoutControl, Version=1.2.2511.40952, Culture=neutral, PublicKeyToken=f28da077ca780590">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\HTMLayoutControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tanone.Common, Version=0.1.4.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\Tanone.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Tanone.Common.DBUtils, Version=0.1.4.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\Tanone.Common.DBUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Tanone.FB2Librarian.AbsPlugin, Version=0.1.4.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\Tanone.FB2Librarian.AbsPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Vfs, Version=1.0.3.16222, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!ExternalDLLs\Vfs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookFilterEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookFilterEditor.Designer.cs">
+      <DependentUpon>BookFilterEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookPreviewForm.Designer.cs">
+      <DependentUpon>BookPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookStorage.cs" />
+    <Compile Include="BriefBookInfo.cs" />
+    <Compile Include="BriefBookInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BriefBookInfoControl.Designer.cs">
+      <DependentUpon>BriefBookInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BufferPool.cs" />
+    <Compile Include="DatabaseException.cs" />
+    <Compile Include="DataBindingHelper.cs" />
+    <Compile Include="Entities\Author.cs" />
+    <Compile Include="Entities\AuthorSynonym.cs" />
+    <Compile Include="Entities\BookInfo.cs" />
+    <Compile Include="Entities\DatabaseInfo.cs" />
+    <Compile Include="Entities\GenreInfo.cs" />
+    <Compile Include="Entities\SequenceInfo.cs" />
+    <Compile Include="ExtensionAttribute.cs" />
+    <Compile Include="Fb2DocumentEntry.cs" />
+    <Compile Include="FileNameProvider.cs" />
+    <Compile Include="Filtering\FilterAdapter.cs" />
+    <Compile Include="Filtering\FilterEvaluator.cs" />
+    <Compile Include="ImportOptions.cs" />
+    <Compile Include="MetricTree.cs" />
+    <Compile Include="ObjectModel\IAuthorInfoNode.cs" />
+    <Compile Include="ProcessLegendItem.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SevenZip\SevenZipFileObject.cs" />
+    <Compile Include="SevenZip\SevenZipFormat.cs" />
+    <Compile Include="SevenZip\SevenZipInterface.cs" />
+    <Compile Include="SevenZip\SevenZipFileProvider.cs" />
+    <Compile Include="SevenZip\SevenZipFileSystem.cs" />
+    <Compile Include="StorageMode.cs" />
+    <Compile Include="StreamDataSource.cs" />
+    <Compile Include="StreamWrapper.cs" />
+    <Compile Include="Utils\FileUtils.cs" />
+    <Compile Include="FirebirdDataAccess.cs" />
+    <Compile Include="GenreTable.cs" />
+    <Compile Include="ImportFileEntry.cs" />
+    <Compile Include="ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportPlugin.cs" />
+    <Compile Include="InvalidFictionBookFormat.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Mapping\DataMapper.cs" />
+    <Compile Include="Mapping\DataReaderSource.cs" />
+    <Compile Include="Mapping\IDataMapper.cs" />
+    <Compile Include="Mapping\IMapDataDestination.cs" />
+    <Compile Include="Mapping\IMapDataSource.cs" />
+    <Compile Include="Mapping\IScalarDataMapper.cs" />
+    <Compile Include="Mapping\ObjectDataSource.cs" />
+    <Compile Include="Mapping\ScalarTypeMapper.cs" />
+    <Compile Include="Mapping\TypeMap.cs" />
+    <Compile Include="Mapping\TypeMapper.cs" />
+    <Compile Include="ObjectMetadata\AttributeInfo.cs" />
+    <Compile Include="ObjectMetadata\DynamicMethodCompiler.cs" />
+    <Compile Include="ObjectMetadata\EntityInfo.cs" />
+    <Compile Include="ObjectMetadata\MetadataCache.cs" />
+    <Compile Include="ObjectMetadata\ObjectBindings.cs" />
+    <Compile Include="ObjectModel\AnnotationInfoNode.cs" />
+    <Compile Include="ObjectModel\AuthorInfoNode.cs" />
+    <Compile Include="ObjectModel\DateTimeNode.cs" />
+    <Compile Include="ObjectModel\DocumentInfoNode.cs" />
+    <Compile Include="ObjectModel\DocumentNode.cs" />
+    <Compile Include="ObjectModel\FictionBook.cs" />
+    <Compile Include="ObjectModel\GenreInfoNode.cs" />
+    <Compile Include="ObjectModel\PublishInfoNode.cs" />
+    <Compile Include="ObjectModel\SequenceInfoNode.cs" />
+    <Compile Include="ObjectModel\TitleInfoNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ListUtils.cs" />
+    <Compile Include="Utils\Iterator.cs" />
+    <Compile Include="Utils\ObservableList.cs" />
+    <Compile Include="Utils\ReadOnlyDictionary.cs" />
+    <Compile Include="Utils\Set.cs" />
+    <Compile Include="Utils\SqlDbCommand.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="XmlResourceResolver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ImportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\fb2.dtd" />
+    <None Include="unrar.dll">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\fb2_txt.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\fb2_annotation.xsl" />
+    <EmbeddedResource Include="Resources\fb2_html.xsl" />
+    <EmbeddedResource Include="Resources\fb2_xhtml.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BookFilterEditor.resx">
+      <DependentUpon>BookFilterEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookPreviewForm.resx">
+      <DependentUpon>BookPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BriefBookInfoControl.resx">
+      <DependentUpon>BriefBookInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\fb2_text_annotation.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImportFiles\fbscanner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\htmlconv.xsl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
